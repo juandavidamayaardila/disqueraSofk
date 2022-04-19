@@ -11,27 +11,79 @@ package co.com.disquera;
  */
 public class Cancion {
     
-    private String nombre;
-    private String cantante;
+    private String titulo;
+    private int identificador;
+    private String fecha;
+    
+    public Cancion(){}
 
-    public Cancion(String nombre, String cantante) {
-        this.nombre = nombre;
-        this.cantante = cantante;
+    public Cancion( int identificador,String titulo, String fecha, int duracion, String genero, String caratula, String descripcion) {
+        this.titulo = titulo;
+        this.identificador = identificador;
+        this.fecha = fecha;
+        this.duracion = duracion;
+        this.genero = genero;
+        this.caratula = caratula;
+        this.descripcion = descripcion;
+    }
+    private int duracion;
+    private String genero;
+
+    public String getTitulo() {
+        return titulo;
     }
 
-    public String getNombre() {
-        return nombre;
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public int getIdentificador() {
+        return identificador;
     }
 
-    public String getCantante() {
-        return cantante;
+    public void setIdentificador(int identificador) {
+        this.identificador = identificador;
     }
 
-    public void setCantante(String cantante) {
-        this.cantante = cantante;
+    public String getFecha() {
+        return fecha;
     }
+
+    public void setFecha(String fecha) {
+        this.fecha = fecha;
+    }
+
+    public int getDuracion() {
+        return duracion;
+    }
+
+    public void setDuracion(int duracion) {
+        this.duracion = duracion;
+    }
+
+    public String getGenero() {
+        return genero;
+    }
+
+    public void setGenero(String genero) {
+        this.genero = genero;
+    }
+
+    public String getCaratula() {
+        return caratula;
+    }
+
+    public void setCaratula(String caratula) {
+        this.caratula = caratula;
+    }
+
+    public String getDescripcion() {
+        return descripcion;
+    }
+
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
+    }
+    private String caratula;
+    private String descripcion;
 }

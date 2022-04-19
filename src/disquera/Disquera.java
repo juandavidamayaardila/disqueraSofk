@@ -5,17 +5,38 @@
  */
 package disquera;
 
+import co.com.disquera.Biblioteca;
+import co.com.disquera.Cancion;
+
 /**
  *
  * @author CW-DV-JDAA
  */
 public class Disquera {
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // TODO code application logic here
+     Biblioteca lista = new Biblioteca();
+     
+     public Disquera(){
+         cargarDatos();
+     }
+     
+     public void agregar(String codigo, Cancion cancion){
+        lista.agregar(codigo, cancion);
     }
+     
+     public void actualizar(String codigo, Cancion cancion){
+        lista.actualizar(codigo, cancion);
+    }
+    
+    public String[][] mostrarDatos(){
+        String matriz[][] = lista.mostrarLista();
+        return matriz;
+    }
+    
+    private void cargarDatos(){
+        Cancion cn = new Cancion(1,"Siempre si","2022-04-18",5,"Salsa","Bonita","Disco de swing cubano");
+        lista.agregar("1", cn);
+    }
+    
     
 }
