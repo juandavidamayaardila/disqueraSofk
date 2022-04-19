@@ -10,19 +10,28 @@ package co.com.disquera;
  * @author CW-DV-JDAA
  */
 public class Cancion {
-    private String titulo;
+    
+    private String nombre;
+    private String cantante;
 
-    public void setTitulo(String titulo) {
-        this.titulo = titulo;
+    public Cancion(String nombre, String cantante) {
+        this.nombre = nombre;
+        this.cantante = cantante;
     }
 
-    /**
-     * Metodo constructor que permite crear la instancia de la 
-     * clase cancion
-     * 
-     * @param titulo 
-     */
-    public Cancion(String titulo) {
-        this.titulo = titulo;
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getCantante() {
+        return cantante;
+    }
+
+    public void setCantante(String cantante) {
+        this.cantante = cantante;
     }
 }
